@@ -2,6 +2,7 @@ Vecta
 -----
 
 Vecta is a library with a nice (Qt style) API that allows you to:
+
 - animate polygons
 - schedule an animation in different steps (usually based on SVG shapes)
 - make **nice backgrounds** with animated and moving things
