@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="640"
+   height="480"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="main-example.svg"
+   version="1.0"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="317.29221"
+     inkscape:cy="220.26417"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="810"
+     inkscape:window-height="744"
+     inkscape:window-x="58"
+     inkscape:window-y="29" />
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 240 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="640 : 240 : 1"
+       inkscape:persp3d-origin="320 : 160 : 1"
+       id="perspective56" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       style="font-size:121.20493317px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial Black;-inkscape-font-specification:Arial Black"
+       d="M 87.7789,50.73801 C 97.129669,50.73801 106.48044,50.73801 115.83121,50.73801 C 122.34124,71.550379 128.85127,92.362748 135.3613,113.17512 C 141.77269,92.362748 148.18408,71.550379 154.59547,50.73801 C 163.67006,50.73801 172.74465,50.73801 181.81924,50.73801 C 171.08756,79.658328 160.35588,108.57865 149.62419,137.49896 C 139.93805,137.49896 130.25192,137.49896 120.56578,137.49896 C 109.63682,108.57865 98.70786,79.658328 87.7789,50.73801 z"
+       id="path2478" />
+    <path
+       style="font-size:121.20493317px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial Black;-inkscape-font-specification:Arial Black"
+       d="M 190.51901,50.73801 C 214.46804,50.73801 238.41706,50.73801 262.36609,50.73801 C 262.36609,56.912676 262.36609,63.087343 262.36609,69.262009 C 247.37329,69.262009 232.38049,69.262009 217.3877,69.262009 C 218.83982,73.323324 214.23437,83.442217 220.13859,83.051437 C 233.12941,83.051437 246.12023,83.051437 259.11105,83.051437 C 259.11105,88.949918 259.11105,94.848399 259.11105,100.74688 C 245.20327,100.74688 231.29548,100.74688 217.3877,100.74688 C 217.3877,106.44809 217.3877,112.1493 217.3877,117.85051 C 232.81449,117.85051 248.24129,117.85051 263.66809,117.85051 C 263.66809,124.39999 263.66809,130.94948 263.66809,137.49896 C 239.28506,137.49896 214.90204,137.49896 190.51901,137.49896 C 190.51901,108.57865 190.51901,79.658328 190.51901,50.73801 z"
+       id="path2476" />
+    <path
+       style="font-size:121.20493317px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial Black;-inkscape-font-specification:Arial Black"
+       d="M 335.92944,102.04889 C 343.7612,104.41617 351.59295,106.78346 359.42471,109.15074 C 356.76953,126.21405 340.33405,140.00174 322.97778,138.98499 C 307.23933,140.71525 289.55819,134.63937 281.27979,120.46356 C 274.95744,108.53454 273.49453,94.261023 276.1997,81.109307 C 278.60143,69.182145 286.18263,57.78769 297.75878,53.155366 C 311.53174,47.917057 327.72391,47.297801 341.12282,53.985057 C 347.71952,57.334831 353.15258,62.978751 356.0143,69.824276 C 360.10966,73.011044 357.3263,78.100382 352.59976,77.79766 C 348.32363,78.26072 344.1269,79.087718 340.24781,80.942776 C 333.80938,82.088701 331.30174,74.536863 327.10997,71.244868 C 323.58239,67.671012 318.41364,68.86316 314.20708,70.149442 C 306.31679,72.476029 302.57256,80.957041 301.98079,88.558371 C 301.39854,95.949255 301.91347,103.64393 304.50882,110.62851 C 307.58147,117.90877 316.72543,120.61685 323.80667,117.98827 C 330.65568,115.8588 336.05516,109.38023 335.92943,102.04889"
+       id="path2474" />
+    <path
+       style="font-size:121.20493317px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial Black;-inkscape-font-specification:Arial Black"
+       d="M 366.28983,50.73801 C 393.45442,50.73801 420.61901,50.73801 447.7836,50.73801 C 447.7836,57.879316 447.7836,65.020621 447.7836,72.161926 C 438.66956,72.161926 429.55551,72.161926 420.44147,72.161926 C 420.44147,93.940938 420.44147,115.71995 420.44147,137.49896 C 411.50496,137.49896 402.56846,137.49896 393.63196,137.49896 C 393.63196,115.71995 393.63196,93.940938 393.63196,72.161926 C 384.51791,72.161926 375.40387,72.161926 366.28983,72.161926 C 366.28983,65.020621 366.28983,57.879316 366.28983,50.73801 z"
+       id="path2472" />
+    <path
+       style="font-size:121.20493317px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial Black;-inkscape-font-specification:Arial Black"
+       d="M 505.07184,123.1769 C 494.89252,123.1769 484.7132,123.1769 474.53387,123.1769 C 472.11585,127.4086 473.10676,136.19306 468.49801,137.49896 C 459.97555,137.49896 451.45309,137.49896 442.93063,137.49896 C 453.80042,108.57865 464.6702,79.658328 475.53998,50.73801 C 485.2853,50.73801 495.03062,50.73801 504.77594,50.73801 C 515.64571,79.658328 526.51548,108.57865 537.38525,137.49896 C 528.03448,137.49896 518.68372,137.49896 509.33295,137.49896 C 507.91258,132.72494 506.49221,127.95092 505.07184,123.1769 z"
+       id="path2470" />
+    <path
+       style="font-size:121.20493317px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial Black;-inkscape-font-specification:Arial Black"
+       d="M 499.44955,104.41617 C 496.25371,94.019847 493.05787,83.623525 489.86203,73.227203 C 486.68592,83.623525 483.50982,94.019847 480.33371,104.41617 C 486.70566,104.41617 493.07761,104.41617 499.44955,104.41617 z"
+       id="text2385" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 76.844894,254.00217 C 74.703114,245.23871 86.466508,248.50478 82.604897,256.02994 C 85.651893,264.10782 78.608647,266.79346 78.684893,269.28217 C 83.828388,270.81617 97.22124,267.40231 85.684891,266.52216 C 86.415084,261.04722 84.256176,252.68318 86.700288,248.92216 C 93.293907,245.87438 92.598979,263.69818 94.230337,250.87745 C 95.496168,242.62402 84.350928,247.36497 79.444733,246.12218 C 71.454809,241.44856 73.258776,261.91407 76.844893,254.00217 L 76.844894,254.00217 z"
+       id="path2466" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 101.70739,258.56216 C 109.86262,246.13396 119.91049,263.03706 103.25802,258.56217 L 102.24263,258.56216 L 101.70739,258.56216 z"
+       id="path2464" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 101.62739,261.12216 C 109.49766,262.0585 126.75407,261.53129 112.41864,251.44655 C 88.184373,245.72472 102.46209,282.87234 117.90739,265.84217 C 114.17545,263.2488 102.21754,272.15522 101.62739,261.12217 L 101.62739,261.12216 z"
+       id="path2462" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 123.72989,267.88217 C 130.37488,276.70486 151.55393,260.59713 132.88989,258.44217 C 119.14217,256.5515 134.86532,250.23056 139.30989,256.54216 C 141.99818,241.27481 109.29826,259.10407 131.96989,261.60217 C 145.85669,264.73112 127.43292,269.89591 124.03989,263.21216 C 123.44628,264.7012 123.84381,266.3293 123.72989,267.88217 z"
+       id="path2460" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 161.67239,252.32217 C 152.71941,257.83412 152.80462,239.0638 150.91239,250.35296 C 146.45296,254.44018 146.93261,253.06741 150.91238,257.11296 C 145.38903,268.47625 165.70626,274.35568 164.95239,264.72217 C 155.22189,275.20602 147.98422,252.4591 159.02938,255.08217 C 161.15435,255.91155 166.56728,253.70488 161.67239,252.32217 z"
+       id="path2458" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 182.21489,266.52216 C 180.66309,261.98298 185.66711,251.32644 179.0641,251.24217 C 167.49795,252.20791 183.65835,253.21317 179.25488,261.10995 C 183.92732,269.11794 164.19808,266.36189 176.26108,269.28217 C 180.63694,270.28448 196.42932,268.44785 185.4487,266.52216 C 184.37076,266.52216 183.29283,266.52216 182.21489,266.52216 z"
+       id="path2456" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 178.57489,245.60217 C 184.90284,253.07773 180.8365,235.47965 178.57489,245.60217 z"
+       id="path2454" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 197.19739,266.52216 C 189.83767,270.59912 209.14535,270.20888 200.11739,264.49138 C 196.40961,252.83829 212.62642,250.54169 209.19739,263.47915 C 203.81232,268.62896 212.35357,272.18687 214.50239,266.82717 C 210.17005,263.69667 213.59909,242.70965 200.15739,253.36217 C 193.5993,247.18126 197.45601,256.04671 197.19739,262.12535 C 197.19739,263.59095 197.19739,265.05655 197.19739,266.52216 z"
+       id="path2452" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 236.45988,268.24216 C 236.84763,262.41262 235.01832,254.3574 238.74989,251.57717 C 230.89036,251.63071 213.33839,250.91488 221.54489,266.06216 C 227.58667,271.02993 239.40293,262.35791 230.77239,273.69154 C 208.02476,275.32397 241.47166,282.25846 236.45989,268.24217"
+       id="path2450" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 227.97989,254.12218 C 250.61899,268.22111 205.86274,268.25933 227.97989,254.12217 L 227.97989,254.12218 z"
+       id="path2448" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 266.98489,248.92216 C 270.32104,255.57508 271.44653,264.24291 276.30489,269.52217 C 281.71272,267.08046 281.66429,258.20908 284.70761,253.09689 C 290.69527,246.8769 284.97922,243.71262 278.94489,247.52217 C 287.07418,248.28216 279.23697,256.62048 278.292,262.2094 C 276.02151,270.60493 273.65256,254.92475 271.33484,251.7706 C 271.14562,247.34762 276.22813,245.6605 266.3049,246.12218 C 264.07382,245.96064 264.84044,249.90154 266.98489,248.92217 L 266.98489,248.92216 z"
+       id="path2446" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 294.2074,258.56216 C 302.36262,246.13396 312.41049,263.03706 295.75802,258.56217 L 294.74263,258.56216 L 294.2074,258.56216 z"
+       id="path2444" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 294.12738,261.12216 C 301.99765,262.0585 319.25407,261.53129 304.91864,251.44655 C 280.68436,245.72472 294.9621,282.87233 310.40739,265.84217 C 306.67546,263.2488 294.71753,272.15523 294.12739,261.12217 L 294.12738,261.12216 z"
+       id="path2442" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 333.5899,257.12216 C 335.00703,241.08122 300.2634,258.64524 320.60989,269.04029 C 331.28864,273.39329 338.72241,258.50593 324.74989,266.84217 C 309.09419,262.52583 325.92614,247.04148 333.20989,258.20217 L 333.58989,257.12217"
+       id="path2440" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 354.17239,252.32217 C 345.21942,257.83411 345.30462,239.06379 343.41239,250.35296 C 338.95295,254.44018 339.43261,253.06741 343.41238,257.11296 C 337.88903,268.47626 358.20626,274.35567 357.45239,264.72217 C 347.72189,275.20602 340.48422,252.4591 351.52938,255.08217 C 353.65435,255.91154 359.06728,253.70488 354.17239,252.32217 z"
+       id="path2438" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 383.1149,260.28217 C 378.81654,235.35319 347.13013,266.44914 372.91489,269.76217 C 378.16137,270.03112 383.42805,265.85779 383.11489,260.28217 L 383.1149,260.28217 z"
+       id="path2436" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 372.91489,267.04218 C 353.18238,262.20633 382.3553,242.85449 379.25427,262.99217 C 378.31128,265.54551 375.57605,267.13001 372.91489,267.04217 L 372.91489,267.04218 z"
+       id="path2434" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 395.0574,266.52216 C 391.30579,255.88958 403.68326,255.09853 406.87426,252.28092 C 399.18129,247.70669 396.34746,257.99395 392.96199,251.24217 C 382.78745,251.29279 396.29645,254.73629 392.13739,262.12534 C 392.06156,268.30968 382.65233,269.09574 394.74977,269.28217 C 404.36475,270.76639 406.07456,265.28768 395.0574,266.52216 z"
+       id="path2432" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 422.8399,266.52216 C 421.28811,261.98298 426.29213,251.32644 419.6891,251.24217 C 408.12294,252.20791 424.28335,253.21317 419.87988,261.10995 C 424.55232,269.11794 404.82309,266.36189 416.88608,269.28217 C 421.26194,270.28448 437.05431,268.44785 426.0737,266.52216 C 424.99577,266.52216 423.91784,266.52216 422.8399,266.52216 z"
+       id="path2430" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 419.19989,245.60217 C 425.52784,253.07773 421.46149,235.47965 419.19989,245.60217 z"
+       id="path2428" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 449.54239,266.80219 C 456.25649,272.718 453.74986,266.84487 452.42239,261.44517 C 459.22009,247.43443 430.16645,251.51793 441.61739,254.34217 C 451.25819,251.24842 451.18345,261.6769 440.92302,257.88655 C 427.96741,262.98111 441.70681,275.84176 449.54239,266.80217"
+       id="path2426" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 449.42239,260.64218 C 449.81843,273.08185 429.23352,261.80063 445.30239,259.96217 L 447.40739,260.13717 L 449.42239,260.64217"
+       id="path2424" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 467.84488,246.52217 C 467.84488,253.18883 467.84488,259.85549 467.84488,266.52216 C 456.33914,265.68562 464.15971,271.31642 471.50346,269.28217 C 484.31673,268.6942 471.71747,267.72721 470.8049,263.47597 C 470.61196,256.98749 471.18475,250.32668 470.52989,243.94217 C 464.64285,241.71805 455.9103,246.84151 467.84488,246.52217 z"
+       id="path2422" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 523.48987,265.92218 C 500.18387,270.26244 514.1048,238.94201 526.20989,251.44217 C 524.84975,235.07933 495.19371,253.96259 509.79489,266.53217 C 518.36343,274.54445 527.89094,268.00125 528.16989,260.00217 C 525.02681,255.5512 510.93897,261.40265 522.67148,261.28217 C 524.46254,260.74843 523.0339,264.96675 523.48987,265.92218 z"
+       id="path2420" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 541.19238,266.52216 C 535.2516,268.45423 536.16917,253.92426 542.95239,257.88217 C 546.197,265.87977 546.72755,246.20724 540.9216,255.52217 C 533.33855,255.17644 539.21032,244.96423 545.91559,248.92216 C 549.40455,251.91403 551.99343,256.49301 550.80239,246.51217 C 544.53641,245.87856 537.78671,245.85975 531.50239,246.47717 C 535.59759,248.82929 534.86457,255.78571 534.7124,262.12232 C 533.59185,268.49729 529.16863,269.77681 539.62017,269.28217 C 542.45576,270.48158 546.07419,266.67611 541.19239,266.52217"
+       id="path2418" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 557.17487,248.92216 C 561.85424,253.96393 565.36782,259.00527 558.625,264.04287 C 547.74783,270.72461 569.57575,270.24039 560.33489,266.52217 C 562.7129,257.60974 569.34092,261.37428 569.33489,266.48217 C 564.24419,271.71041 582.92791,269.40167 571.63391,263.26098 C 564.85425,258.4886 569.4132,253.70515 573.49487,248.92216 C 577.19718,243.77021 563.52678,246.39265 568.81486,250.56048 C 564.80953,260.17523 560.54392,247.56205 561.89489,246.12217 C 559.96516,245.82648 552.10317,245.97009 557.17489,248.92217"
+       id="path2416" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 208.91739,316.80219 C 215.63148,322.718 213.12487,316.84487 211.79739,311.44517 C 218.59509,297.43442 189.54145,301.51793 200.99239,304.34217 C 210.6332,301.24843 210.55844,311.6769 200.29802,307.88655 C 187.34241,312.98111 201.08181,325.84176 208.91739,316.80217"
+       id="path2414" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 208.79739,310.64218 C 209.19343,323.08185 188.60852,311.80063 204.67739,309.96217 L 206.78239,310.13717 L 208.79739,310.64217"
+       id="path2412" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 221.25989,316.52216 C 213.90017,320.59912 233.20785,320.20888 224.17989,314.49138 C 220.47211,302.83829 236.68892,300.54169 233.25989,313.47915 C 227.87482,318.62896 236.41607,322.18687 238.56489,316.82717 C 234.23255,313.69667 237.66159,292.70965 224.21989,303.36217 C 217.6618,297.18125 221.51851,306.04671 221.25989,312.12535 C 221.25989,313.59095 221.25989,315.05655 221.25989,316.52216 z"
+       id="path2410" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 254.40239,316.52216 C 252.85059,311.98298 257.85461,301.32645 251.2516,301.24217 C 239.68544,302.2079 255.84585,303.21318 251.44238,311.10995 C 256.11482,319.11794 236.38558,316.36189 248.44858,319.28217 C 252.82444,320.28448 268.61681,318.44785 257.6362,316.52216 C 256.55826,316.52216 255.48033,316.52216 254.40239,316.52216 z"
+       id="path2408" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 250.76239,295.60217 C 257.09033,303.07773 253.02401,285.47966 250.76239,295.60217 z"
+       id="path2406" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 283.78488,308.40216 C 279.63584,315.31684 291.01739,323.43245 286.78489,316.52217 C 288.41821,307.49475 284.8242,297.58548 276.30989,301.32217 C 266.2216,300.87874 264.65675,300.3607 267.34488,310.09455 C 267.85506,317.25987 262.17033,320.71605 272.61989,319.00217 C 268.7832,317.72867 268.85788,297.71126 275.70489,306.88217 C 274.01553,311.58577 277.01954,324.80798 280.43989,316.78217 C 274.61872,316.56562 281.3305,293.57732 283.78489,308.40217 L 283.78488,308.40216 z"
+       id="path2404" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 305.16739,316.80219 C 311.88149,322.718 309.37486,316.84487 308.04739,311.44517 C 314.84509,297.43442 285.79145,301.51793 297.24239,304.34217 C 306.88319,301.24843 306.80845,311.6769 296.54802,307.88655 C 283.59241,312.98111 297.33181,325.84176 305.16739,316.80217"
+       id="path2402" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 305.04739,310.64218 C 305.44343,323.08185 284.85852,311.80063 300.92739,309.96217 L 303.03239,310.13717 L 305.04739,310.64217"
+       id="path2400" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 330.10989,302.32217 C 321.15692,307.83411 321.24212,289.06379 319.34989,300.35296 C 314.89045,304.44017 315.37011,303.06742 319.34988,307.11298 C 313.82654,318.47627 334.14377,324.35566 333.38989,314.72217 C 323.6594,325.20602 316.42171,302.45912 327.46688,305.08218 C 329.59186,305.91157 335.00477,303.70487 330.10989,302.32217 z"
+       id="path2398" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 350.6524,316.52216 C 349.10061,311.98298 354.10463,301.32644 347.5016,301.24217 C 335.93544,302.20789 352.09585,303.21318 347.69238,311.10995 C 352.36482,319.11794 332.63559,316.36189 344.69858,319.28217 C 349.07444,320.28448 364.86681,318.44785 353.8862,316.52216 C 352.80827,316.52216 351.73034,316.52216 350.6524,316.52216 z"
+       id="path2396" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 347.01239,295.60217 C 353.34033,303.07773 349.274,285.47965 347.01239,295.60217 z"
+       id="path2394" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 383.1149,310.28217 C 378.81654,285.35319 347.13013,316.44913 372.91489,319.76217 C 378.16137,320.03112 383.42805,315.85779 383.11489,310.28217 L 383.1149,310.28217 z"
+       id="path2392" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 372.91489,317.04218 C 353.18238,312.20633 382.3553,292.85448 379.25427,312.99217 C 378.31128,315.54551 375.57605,317.13001 372.91489,317.04217 L 372.91489,317.04218 z"
+       id="path2390" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 389.69739,316.52216 C 382.33767,320.59912 401.64534,320.20888 392.61739,314.49138 C 388.90963,302.83829 405.12641,300.54169 401.69739,313.47915 C 396.31233,318.62895 404.85356,322.18687 407.00239,316.82717 C 402.67004,313.69667 406.09909,292.70965 392.65739,303.36217 C 386.09929,297.18125 389.95602,306.04672 389.69739,312.12535 C 389.69739,313.59095 389.69739,315.05655 389.69739,316.52216 z"
+       id="path2388" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 417.19989,316.08218 C 426.64722,329.7892 426.9278,302.7225 417.19989,316.08217"
+       id="path2386" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 441.26239,316.08218 C 450.70972,329.7892 450.9903,302.7225 441.26239,316.08217"
+       id="path2384" />
+    <path
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       d="M 465.32489,316.08218 C 474.77222,329.7892 475.0528,302.7225 465.32489,316.08217"
+       id="text2391" />
+  </g>
+</svg>
