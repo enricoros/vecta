@@ -27,9 +27,9 @@
  *                                                                         *
  ***************************************************************************/
 
-#include "VectaTransition.h"
+#include "FloodTransition.h"
 
-VectaTransition::VectaTransition( const VectaPolys & startConfig, const VectaPolys & endConfig, double duration, TransitionShape shape, bool growing )
+FloodTransition::FloodTransition( const FloodPolys & startConfig, const FloodPolys & endConfig, double duration, TransitionShape shape, bool growing )
     : QObject()
     , m_startPolys( startConfig )
     , m_stopPolys( endConfig )
@@ -44,32 +44,32 @@ VectaTransition::VectaTransition( const VectaPolys & startConfig, const VectaPol
 {
 }
 
-VectaTransition::~VectaTransition()
+FloodTransition::~FloodTransition()
 {
 }
 
-void VectaTransition::setDuration( double duration )
+void FloodTransition::setDuration( double duration )
 {
     m_duration = duration;
 }
 
-void VectaTransition::setTransition( TransitionShape shape, bool growing )
+void FloodTransition::setTransition( TransitionShape shape, bool growing )
 {
     m_polyTransition = shape;
     m_polyGrowing = growing;
 }
 
-void VectaTransition::setAlphaTransition( TransitionShape shape, bool growing )
+void FloodTransition::setAlphaTransition( TransitionShape shape, bool growing )
 {
     m_alphaTransition = shape;
     m_alphaGrowing = growing;
 }
 
-void VectaTransition::startAnimation()
+void FloodTransition::startAnimation()
 {
     // sanity check
     if ( m_running ) {
-        qWarning( "VectaTransition::startAnimation: issuing startAnimation twice" );
+        qWarning( "FloodTransition::startAnimation: issuing startAnimation twice" );
         return;
     }
 
@@ -81,7 +81,7 @@ void VectaTransition::startAnimation()
     emit updated();
 }
 
-void VectaTransition::stopAnimation()
+void FloodTransition::stopAnimation()
 {
     // sanity check
     if ( !m_running )
@@ -95,12 +95,12 @@ void VectaTransition::stopAnimation()
     emit ended();
 }
 
-bool VectaTransition::running() const
+bool FloodTransition::running() const
 {
     return m_running;
 }
 
-void VectaTransition::updateAnimation( double dT )
+void FloodTransition::updateAnimation( double dT )
 {
     if ( !m_running )
         return;
@@ -125,17 +125,17 @@ void VectaTransition::updateAnimation( double dT )
     emit updated();
 }
 
-const VectaPolys & VectaTransition::polys() const
+const FloodPolys & FloodTransition::polys() const
 {
     return m_currentPolys;
 }
 
-double VectaTransition::alpha() const
+double FloodTransition::alpha() const
 {
     return m_alpha;
 }
 
-void VectaTransition::updatePolys( double phase )
+void FloodTransition::updatePolys( double phase )
 {
     // compute fade factor
     double fadeFactor = factor( phase, m_polyTransition, m_polyGrowing );
@@ -148,8 +148,8 @@ void VectaTransition::updatePolys( double phase )
 
     // perform a smooth transition between start and stop
     m_currentPolys.clear();
-    VectaPolys::iterator itB = m_startPolys.begin(), endB = m_startPolys.end();
-    VectaPolys::iterator itE = m_stopPolys.begin(), endE = m_stopPolys.end();
+    FloodPolys::iterator itB = m_startPolys.begin(), endB = m_startPolys.end();
+    FloodPolys::iterator itE = m_stopPolys.begin(), endE = m_stopPolys.end();
     while ( itB != endB && itE != endE ) {
         m_currentPolys.append( itB->fadedTo( *itE, fadeFactor ) );
         ++itB;
@@ -157,40 +157,40 @@ void VectaTransition::updatePolys( double phase )
     }
 }
 
-void VectaTransition::updateAlpha( double phase )
+void FloodTransition::updateAlpha( double phase )
 {
     m_alpha = factor( phase, m_alphaTransition, m_alphaGrowing );
 }
 
-double VectaTransition::factor( double phase, TransitionShape tShape, bool growing )
+double FloodTransition::factor( double phase, TransitionShape tShape, bool growing )
 {
     double value = phase;
     switch ( tShape ) {
 
         // 0
-        case VectaTransition::Zero:
+        case FloodTransition::Zero:
             return 0.0;
 
         // 1
-        case VectaTransition::One:
+        case FloodTransition::One:
             return 1.0;
 
         // value already ok
-        case VectaTransition::Linear:
+        case FloodTransition::Linear:
             break;
 
         // x^2
-        case VectaTransition::QuadIn:
+        case FloodTransition::QuadIn:
             value *= value;
             break;
 
         // 1 - (1-x)^2
-        case VectaTransition::QuadOut:
+        case FloodTransition::QuadOut:
             value = 1.0 - (1.0 - value) * (1.0 - value);
             break;
 
         // mix of the 2 above
-        case VectaTransition::QuadInOut:
+        case FloodTransition::QuadInOut:
             if ( value < 0.5 ) {
                 value *= value * 2;
             } else {

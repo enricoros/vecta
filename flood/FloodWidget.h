@@ -27,14 +27,63 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef __VecAnimator_h__
-#define __VecAnimator_h__
+#ifndef __FloodWidget_h__
+#define __FloodWidget_h__
 
-//TODO: HAVE PHASE (0..1)
+#include <QWidget>
+#include <QColor>
+#include <QTime>
+#include "FloodPoly.h"
+#include "FloodTransition.h"
+class QTimer;
 
-class VecAnimator {
+class FloodWidget : public QWidget {
+    Q_OBJECT
     public:
-        VecAnimator() {}
+        FloodWidget( QWidget * vampiredWidget );
+        ~FloodWidget();
+
+        // TODO: add anchoring capabilities and fixed-width/height/size stuff
+
+        enum PaintingStyle { Color, ObjectColor, ObjectMonochrome, ScreenMonochrome };
+        void setPaintingWireframe( bool enabled );
+        void setPaintingStyle( PaintingStyle style );
+        void setPaintingColor( const QColor & color );
+
+        void appendTransition( FloodTransition * transition );
+        void startTransitions();
+        void clear();
+
+    Q_SIGNALS:
+        void transitionsEnded();
+
+    protected:
+        // ::QObject
+        bool eventFilter( QObject * obj, QEvent * event );
+        // ::Qwidget
+        void paintEvent( QPaintEvent * event );
+
+    private:
+        // setup stuff
+        QWidget * m_vampiredWidget;
+        bool m_wireframe;
+        PaintingStyle m_paintStyle;
+        QColor m_color;
+
+        // TEMP stuff
+        FloodPolys m_initialLines;
+
+        // animation
+        FloodTransition * m_currentTransition;
+        QList< FloodTransition * > m_nextTransitions;
+        QTimer * m_timer;
+        QTime m_timeMeasure;
+
+    private Q_SLOTS:
+        void slotAnimate();
+        void slotTransitionStarted();
+        void slotTransitionUpdated();
+        void slotTransitionEnded();
 };
 
 #endif

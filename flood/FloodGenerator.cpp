@@ -27,7 +27,7 @@
  *                                                                         *
  ***************************************************************************/
 
-#include "VectaGenerator.h"
+#include "FloodGenerator.h"
 #include "enricomath.h"
 #include <QDomDocument>
 #include <QDomElement>
@@ -35,14 +35,14 @@
 #include <QStringList>
 
 
-VectaPoly VectaGenerator::fromQPainterPath( const QPainterPath & /*painterPath*/ )
+FloodPoly FloodGenerator::fromQPainterPath( const QPainterPath & /*painterPath*/ )
 {
-    VectaPoly p;
-    VectaPoly::Node n;
+    FloodPoly p;
+    FloodPoly::Node n;
     n.point = Vector2( 10, 10 );
     n.control = Control2( 10, M_PI );
     p.addNode( n );
-    qWarning( "VectaPoly::fromQPainterPath: Not Implemented" );
+    qWarning( "FloodPoly::fromQPainterPath: Not Implemented" );
     return p;
 }
 
@@ -51,7 +51,7 @@ static bool parseXY( const QString & string, double * x, double * y )
 {
     QStringList vals = string.split( "," );
     if ( vals.count() != 2 ) {
-        qWarning( "VectaPoly: recursiveParse (svg): parseXY: wrong arg number" );
+        qWarning( "FloodPoly: recursiveParse (svg): parseXY: wrong arg number" );
         return false;
     }
     *x = vals[ 0 ].toDouble();
@@ -67,9 +67,9 @@ Control2 controlFromVect( const Vector2 & vect )
     return c;
 }
 
-static VectaPolys recursiveParse( QDomElement & element, const QString & elementId )
+static FloodPolys recursiveParse( QDomElement & element, const QString & elementId )
 {
-    VectaPolys lines;
+    FloodPolys lines;
 
     QDomNode subNode = element.firstChild();
     for ( ; !subNode.isNull(); subNode = subNode.nextSibling() ) {
@@ -82,7 +82,7 @@ static VectaPolys recursiveParse( QDomElement & element, const QString & element
 
         // g: descend
         if ( tagName == "g" ) {
-            qWarning( "VectaPolys recursiveParse: transformed 'g' elements are not supported" );
+            qWarning( "FloodPolys recursiveParse: transformed 'g' elements are not supported" );
             lines << recursiveParse( elem, elementId );
         }
         // path: parse
@@ -99,9 +99,9 @@ static VectaPolys recursiveParse( QDomElement & element, const QString & element
                 continue;
 
             // build the line
-            VectaPoly line;
+            FloodPoly line;
             while ( !pd.isEmpty() ) {
-                VectaPoly::Node newNode;
+                FloodPoly::Node newNode;
                 // NOTE: the second C overwrites the control of the previous C'ed point
                 QString cmd = pd.takeFirst();
                 if ( cmd == "M" )           // move
@@ -113,13 +113,13 @@ static VectaPolys recursiveParse( QDomElement & element, const QString & element
                     parseXY( pd.takeFirst(), &c1.rx(), &c1.ry() );
                     parseXY( pd.takeFirst(), &c2.rx(), &c2.ry() );
                     parseXY( pd.takeFirst(), &newNode.point.rx(), &newNode.point.ry() );
-                    VectaPoly::Node & lastNode = line.edit().last();
+                    FloodPoly::Node & lastNode = line.edit().last();
                     lastNode.control = controlFromVect( c1 - lastNode.point );
                     newNode.control = controlFromVect( newNode.point - c2 );
                 } else if ( cmd == "z" ) {
                     // close line if not closed
-                    /*VectaPoly::Node & firstNode = line.edit().first();
-                    VectaPoly::Node & lastNode = line.edit().last();
+                    /*FloodPoly::Node & firstNode = line.edit().first();
+                    FloodPoly::Node & lastNode = line.edit().last();
                     if ( firstNode.point != lastNode.point ) {
                         newNode.point = firstNode.point;
                         newNode.control = firstNode.control;
@@ -129,11 +129,11 @@ static VectaPolys recursiveParse( QDomElement & element, const QString & element
 
                     // append the line
                     lines.append( line );
-                    line = VectaPoly();
+                    line = FloodPoly();
                     continue;
                 // suppress A element
                 } else {
-                    qWarning( "VectaPoly: recursiveParse (svg): unknown path element '%s'", qPrintable( cmd ) );
+                    qWarning( "FloodPoly: recursiveParse (svg): unknown path element '%s'", qPrintable( cmd ) );
                     continue;
                 }
                 line.addNode( newNode );
@@ -144,17 +144,17 @@ static VectaPolys recursiveParse( QDomElement & element, const QString & element
         }
         // others: warn
         else
-            qWarning( "VectaPoly: recursiveParse (svg): unknown element '%s'", qPrintable( elem.tagName() ) );
+            qWarning( "FloodPoly: recursiveParse (svg): unknown element '%s'", qPrintable( elem.tagName() ) );
     }
 
     return lines;
 }
 
-VectaPolys VectaGenerator::fromSvgPaths( const QString & fileName, const QString & elementId )
+FloodPolys FloodGenerator::fromSvgPaths( const QString & fileName, const QString & elementId )
 {
-    VectaPolys polys;
+    FloodPolys polys;
     if ( !QFile::exists( fileName ) ) {
-        qWarning( "VectaGenerator::fromSvgPaths: can't find '%s'", qPrintable( fileName ) );
+        qWarning( "FloodGenerator::fromSvgPaths: can't find '%s'", qPrintable( fileName ) );
         return polys;
     }
 
@@ -177,19 +177,19 @@ VectaPolys VectaGenerator::fromSvgPaths( const QString & fileName, const QString
     return polys;
 }
 
-VectaPolys VectaGenerator::starPolys( const VectaPolys & source, double mag )
+FloodPolys FloodGenerator::starPolys( const FloodPolys & source, double mag )
 {
-    VectaPolys starred;
-    VectaPolys::const_iterator it = source.begin(), end = source.end();
+    FloodPolys starred;
+    FloodPolys::const_iterator it = source.begin(), end = source.end();
     for ( ; it != end; ++it ) {
-        VectaPoly poly = *it;
+        FloodPoly poly = *it;
 
         Vector2 polyCenter = poly.centerVector();
 
-        VectaPoly::Nodes & nodes = poly.edit();
-        VectaPoly::Nodes::iterator nIt = nodes.begin(), nEnd = nodes.end();
+        FloodPoly::Nodes & nodes = poly.edit();
+        FloodPoly::Nodes::iterator nIt = nodes.begin(), nEnd = nodes.end();
         for ( ; nIt != nEnd; ++nIt ) {
-            VectaPoly::Node & node = *nIt;
+            FloodPoly::Node & node = *nIt;
             Vector2 v1 = node.point - polyCenter;
             node.point = polyCenter + v1 * (1.0 + mag * ((double)qrand() / RAND_MAX));
         }
@@ -199,17 +199,17 @@ VectaPolys VectaGenerator::starPolys( const VectaPolys & source, double mag )
     return starred;
 }
 
-VectaPolys VectaGenerator::spreadPolys( const VectaPolys & source, const QRect & outGemetry )
+FloodPolys FloodGenerator::spreadPolys( const FloodPolys & source, const QRect & outGemetry )
 {
-    VectaPolys spread;
+    FloodPolys spread;
 
     // precalc params
     int rad = hypot( outGemetry.width(), outGemetry.height() );
     Vector2 center( outGemetry.center().x(), outGemetry.center().y() );
 
-    VectaPolys::const_iterator it = source.begin(), end = source.end();
+    FloodPolys::const_iterator it = source.begin(), end = source.end();
     for ( ; it != end; ++it ) {
-        VectaPoly poly = *it;
+        FloodPoly poly = *it;
         double hRad = rad + (qrand() % (rad/8));
         Control2 posPolar( hRad, 2 * M_PI * ((double)qrand() / RAND_MAX) );
         Vector2 posXY = posPolar.toVector2() + center;
@@ -219,19 +219,19 @@ VectaPolys VectaGenerator::spreadPolys( const VectaPolys & source, const QRect &
     return spread;
 }
 
-VectaPolys VectaGenerator::heavyPolys( const VectaPolys & source, double G, double dT )
+FloodPolys FloodGenerator::heavyPolys( const FloodPolys & source, double G, double dT )
 {
-    VectaPolys polys;
-    foreach ( const VectaPoly & poly, source ) {
+    FloodPolys polys;
+    foreach ( const FloodPoly & poly, source ) {
         double acc = G * (1 + 2 * ((double)qrand() / RAND_MAX));
         double dY = acc * dT * dT * 0.5;
 
         // add dY to each node
-        const VectaPoly::Nodes & nodes = poly.view();
-        VectaPoly::Nodes::const_iterator it = nodes.begin(), end = nodes.end();
-        VectaPoly newPoly;
+        const FloodPoly::Nodes & nodes = poly.view();
+        FloodPoly::Nodes::const_iterator it = nodes.begin(), end = nodes.end();
+        FloodPoly newPoly;
         for ( ; it != end; ++it ) {
-            VectaPoly::Node node = *it;
+            FloodPoly::Node node = *it;
             node.point += Vector2( 0, dY );
             newPoly.addNode( node );
         }

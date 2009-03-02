@@ -27,18 +27,18 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef __VecAnimatorTwirl_h__
-#define __VecAnimatorTwirl_h__
+#ifndef __FloodAnimatorTwirl_h__
+#define __FloodAnimatorTwirl_h__
 
-#include "VecAnimator.h"
-#include "VectaPoly.h"
+#include "FloodAnimator.h"
+#include "FloodPoly.h"
 
 
-class VecAnimatorTwirl : public VecAnimator {
+class FloodAnimatorTwirl : public FloodAnimator {
     public:
-        VecAnimatorTwirl( double cx, double cy, double rads );
+        FloodAnimatorTwirl( double cx, double cy, double rads );
 
-        void step( VectaPoly & VectaPoly );
+        void step( FloodPoly & FloodPoly );
         void setPos( double x, double y );
         void setSpeed( double rads );
 

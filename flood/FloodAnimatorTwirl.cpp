@@ -27,15 +27,41 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef __VecAnimatorText_h__
-#define __VecAnimatorText_h__
+#include "FloodAnimatorTwirl.h"
+#include "enricomath.h"
 
-#include "VecAnimator.h"
+FloodAnimatorTwirl::FloodAnimatorTwirl( double cx, double cy, double rads )
+    : m_center( cx, cy )
+    , m_rads( rads )
+{
+}
 
-class VecAnimatorText : public VecAnimator {
-    public:
-        VecAnimatorText();
-};
+void FloodAnimatorTwirl::step( FloodPoly & FloodPoly )
+{
+    QList<FloodPoly::Node> & nodes = FloodPoly.edit();
+    QList<FloodPoly::Node>::iterator it = nodes.begin(), end = nodes.end();
+    for ( ; it != end; ++it ) {
+        Vector2 rad = it->point - m_center;
+        // rotate the rad vector
+        double mod = rad.module();
+        if ( mod > 0.0 ) {
+            Control2 c( mod * 0.999, rad.angle() );
+            double thDiff = m_rads / mod;
+            c.addTheta( thDiff );
+            rad = c.toVector2();
+            it->point = rad + m_center;
+            it->control.addTheta( thDiff );
+        }
+    }
+}
 
-#endif
+void FloodAnimatorTwirl::setPos( double x, double y )
+{
+    m_center = Vector2( x, y );
+}
+
+void FloodAnimatorTwirl::setSpeed( double rads )
+{
+    m_rads = rads;
+}
 

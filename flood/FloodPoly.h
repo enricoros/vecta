@@ -27,64 +27,62 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef __VectaWidget_h__
-#define __VectaWidget_h__
+#ifndef __FloodPoly__
+#define __FloodPoly__
 
-#include <QWidget>
-#include <QColor>
-#include <QTime>
-#include "VectaPoly.h"
-#include "VectaTransition.h"
-class QTimer;
+#include <QtCore/QList>
+#include <QtCore/QString>
+#include <QtGui/QPainterPath>
+#include <QRectF>
+#include "enricomath.h"
 
-class VectaWidget : public QWidget {
-    Q_OBJECT
+// TODO: ADD A NOTION OF LINE-FOLLOWING for Rendering Segments
+
+/// \brief Basic editable path, the atom of this framework
+class FloodPoly {
     public:
-        VectaWidget( QWidget * vampiredWidget );
-        ~VectaWidget();
+        FloodPoly();
 
-        // TODO: add anchoring capabilities and fixed-width/height/size stuff
+        // definitions
+        struct Node {
+            Vector2     point;
+            Control2    control;
+        };
+        typedef QList< Node > Nodes;
 
-        enum PaintingStyle { Color, ObjectColor, ObjectMonochrome, ScreenMonochrome };
-        void setPaintingWireframe( bool enabled );
-        void setPaintingStyle( PaintingStyle style );
-        void setPaintingColor( const QColor & color );
+        // structure manipulations
+        void addNode( const Node & node );
+        void addNode( const Vector2 & point, const Control2 & control );
+        Node takeFirst();
+        Node takeLast();
+        void reset();
+        int nodes() const;
 
-        void appendTransition( VectaTransition * transition );
-        void startTransitions();
-        void clear();
+        // aspect manipulation
+        void setPos( double px, double py );
+        void moveBy( double tx, double ty );
+        void scale( const Vector2 & pivot, double xMag, double yMag );
+        QRectF pointsBoundingRect() const;
+        Vector2 centerVector() const;
 
-    Q_SIGNALS:
-        void transitionsEnded();
+        // direct point editing
+        Nodes & edit();
+        const Nodes & view() const;
 
-    protected:
-        // ::QObject
-        bool eventFilter( QObject * obj, QEvent * event );
-        // ::Qwidget
-        void paintEvent( QPaintEvent * event );
+        // other stuff
+        FloodPoly fadedTo( const FloodPoly & other, double phase ) const;
+
+        // generate a QPainterPath from this (temp.. for rendering)
+        QPainterPath toPainterPath() const;
+
+        // debug
+        void __dump();
 
     private:
-        // setup stuff
-        QWidget * m_vampiredWidget;
-        bool m_wireframe;
-        PaintingStyle m_paintStyle;
-        QColor m_color;
-
-        // TEMP stuff
-        VectaPolys m_initialLines;
-
-        // animation
-        VectaTransition * m_currentTransition;
-        QList< VectaTransition * > m_nextTransitions;
-        QTimer * m_timer;
-        QTime m_timeMeasure;
-
-    private Q_SLOTS:
-        void slotAnimate();
-        void slotTransitionStarted();
-        void slotTransitionUpdated();
-        void slotTransitionEnded();
+        Nodes m_nodes;
 };
 
-#endif
+/// \brief FloodPoly collection
+typedef QList< FloodPoly > FloodPolys;
 
+#endif

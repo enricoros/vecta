@@ -27,26 +27,21 @@
  *                                                                         *
  ***************************************************************************/
 
-#include "VecAnimatorGravity.h"
+#ifndef __FloodGenerator_h__
+#define __FloodGenerator_h__
 
-VecAnimatorGravity::VecAnimatorGravity( double g )
-    : m_gConst( g )
-{
-}
+#include "FloodPoly.h"
 
-void VecAnimatorGravity::step( int id, VectaPoly & VectaPoly, double dT )
-{
-    if ( !m_states.contains( id ) )
-        m_states[ id ] = QPair< double, double >( 0, m_gConst * (1 + (double)qrand() / RAND_MAX) );
+class FloodGenerator {
+    public:
+        // loaders
+        static FloodPoly fromQPainterPath( const QPainterPath & painterPath );
+        static FloodPolys fromSvgPaths( const QString & fileName, const QString & elementId = QString() );
 
-    // phy update
-    double acc = m_states[ id ].second;
-    double speed = m_states[ id ].first + acc * dT;
-    m_states[ id ].first = speed;
+        // generators
+        static FloodPolys starPolys( const FloodPolys & source, double mag = 0.1 );
+        static FloodPolys spreadPolys( const FloodPolys & source, const QRect & outGemetry );
+        static FloodPolys heavyPolys( const FloodPolys & source, double G, double dT );
+};
 
-    QList<VectaPoly::Node> & nodes = VectaPoly.edit();
-    QList<VectaPoly::Node>::iterator it = nodes.begin(), end = nodes.end();
-    for ( ; it != end; ++it )
-        it->point += Vector2( 0, speed * dT );
-}
-
+#endif

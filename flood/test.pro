@@ -2,7 +2,7 @@ TEMPLATE = app
 DEPENDPATH += .
 INCLUDEPATH += . ..
 
-include(vecta.pri)
+include(flood.pri)
 
 HEADERS +=
 SOURCES += main.cpp

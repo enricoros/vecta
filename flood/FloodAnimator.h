@@ -27,61 +27,15 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef __VectaTransition_h__
-#define __VectaTransition_h__
+#ifndef __FloodAnimator_h__
+#define __FloodAnimator_h__
 
-#include <QObject>
-#include "VectaPoly.h"
+//TODO: HAVE PHASE (0..1)
 
-class VectaTransition : public QObject {
-    Q_OBJECT
+class FloodAnimator {
     public:
-        // public types
-        enum TransitionShape { Zero, One, Linear, QuadIn, QuadOut, QuadInOut };
-
-        // ctor
-        VectaTransition( const VectaPolys & startConfig, const VectaPolys & endConfig, double duration = 1.0, TransitionShape shape = Linear, bool growing = true );
-        ~VectaTransition();
-
-        // animation setup
-        void setDuration( double duration );
-        void setTransition( TransitionShape shape, bool growing );
-        void setAlphaTransition( TransitionShape shape, bool growing );
-
-        // animation control
-        void startAnimation();
-        void stopAnimation();
-        bool running() const;
-
-        // called by VectaWidget
-        void updateAnimation( double dT );
-        const VectaPolys & polys() const;
-        double alpha() const;
-
-    Q_SIGNALS:
-        void started();
-        void updated();
-        void ended();
-
-    private:
-        void updatePolys( double phase );
-        void updateAlpha( double phase );
-        double factor( double phase, TransitionShape tShape, bool growing );
-
-        // startup config
-        VectaPolys m_startPolys;
-        VectaPolys m_stopPolys;
-        VectaPolys m_currentPolys;
-        double m_duration;
-        TransitionShape m_polyTransition;
-        bool m_polyGrowing;
-        TransitionShape m_alphaTransition;
-        bool m_alphaGrowing;
-
-        // animation stuff
-        bool m_running;
-        double m_time;
-        double m_alpha;
+        FloodAnimator() {}
 };
 
 #endif
+

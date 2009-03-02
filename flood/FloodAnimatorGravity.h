@@ -27,18 +27,23 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef __VecAnimatorAttractor_h__
-#define __VecAnimatorAttractor_h__
+#ifndef __FloodAnimatorGravity_h__
+#define __FloodAnimatorGravity_h__
 
-#include "VecAnimator.h"
+#include "FloodAnimator.h"
+#include "FloodPoly.h"
+#include <QMap>
+#include <QPair>
 
-class VecAnimatorAttractor : public VecAnimator {
+class FloodAnimatorGravity : public FloodAnimator {
     public:
-        VecAnimatorAttractor();
+        FloodAnimatorGravity( double g = 9.81 /*pixel / sec^2*/ );
 
-        void addAttractor( qreal x, qreal y, qreal magnitude );
-        void clearAttractors();
-        int attractors() const;
+        void step( int id, FloodPoly & FloodPoly, double dT );
+
+    private:
+        QMap<int, QPair<double, double> > m_states;
+        double m_gConst;
 };
 
 #endif

@@ -27,23 +27,14 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef __VecAnimatorGravity_h__
-#define __VecAnimatorGravity_h__
+#ifndef __FloodAnimatorWind_h__
+#define __FloodAnimatorWind_h__
 
-#include "VecAnimator.h"
-#include "VectaPoly.h"
-#include <QMap>
-#include <QPair>
+#include "FloodAnimator.h"
 
-class VecAnimatorGravity : public VecAnimator {
+class FloodAnimatorWind : public FloodAnimator {
     public:
-        VecAnimatorGravity( double g = 9.81 /*pixel / sec^2*/ );
-
-        void step( int id, VectaPoly & VectaPoly, double dT );
-
-    private:
-        QMap<int, QPair<double, double> > m_states;
-        double m_gConst;
+        FloodAnimatorWind();
 };
 
 #endif

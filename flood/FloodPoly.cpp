@@ -27,19 +27,19 @@
  *                                                                         *
  ***************************************************************************/
 
-#include "VectaPoly.h"
+#include "FloodPoly.h"
 #include <QDebug>
 
-VectaPoly::VectaPoly()
+FloodPoly::FloodPoly()
 {
 }
 
-void VectaPoly::addNode( const Node & node )
+void FloodPoly::addNode( const Node & node )
 {
     m_nodes.append( node );
 }
 
-void VectaPoly::addNode( const Vector2 & point, const Control2 & control )
+void FloodPoly::addNode( const Vector2 & point, const Control2 & control )
 {
     Node n;
     n.point = point;
@@ -47,27 +47,27 @@ void VectaPoly::addNode( const Vector2 & point, const Control2 & control )
     m_nodes.append( n );
 }
 
-VectaPoly::Node VectaPoly::takeFirst()
+FloodPoly::Node FloodPoly::takeFirst()
 {
     return m_nodes.takeFirst();
 }
 
-VectaPoly::Node VectaPoly::takeLast()
+FloodPoly::Node FloodPoly::takeLast()
 {
     return m_nodes.takeLast();
 }
 
-void VectaPoly::reset()
+void FloodPoly::reset()
 {
     m_nodes.clear();
 }
 
-int VectaPoly::nodes() const
+int FloodPoly::nodes() const
 {
     return m_nodes.size();
 }
 
-void VectaPoly::setPos( double px, double py )
+void FloodPoly::setPos( double px, double py )
 {
     if ( m_nodes.isEmpty() )
         return;
@@ -78,7 +78,7 @@ void VectaPoly::setPos( double px, double py )
         it->point += tv;
 }
 
-void VectaPoly::moveBy( double tx, double ty )
+void FloodPoly::moveBy( double tx, double ty )
 {
     Vector2 tv( tx, ty );
     Nodes::iterator it = m_nodes.begin(), end = m_nodes.end();
@@ -86,7 +86,7 @@ void VectaPoly::moveBy( double tx, double ty )
         it->point += tv;
 }
 
-void VectaPoly::scale( const Vector2 & pivot, double xMag, double yMag )
+void FloodPoly::scale( const Vector2 & pivot, double xMag, double yMag )
 {
     Nodes::iterator it = m_nodes.begin(), end = m_nodes.end();
     for ( ; it != end; ++it ) {
@@ -95,7 +95,7 @@ void VectaPoly::scale( const Vector2 & pivot, double xMag, double yMag )
     }
 }
 
-/*QRectF VectaPoly::pointsBoundingRect() const
+/*QRectF FloodPoly::pointsBoundingRect() const
 {
     if ( m_nodes.isEmpty() )
         return QRectF();
@@ -122,7 +122,7 @@ void VectaPoly::scale( const Vector2 & pivot, double xMag, double yMag )
     return br;
 }*/
 
-Vector2 VectaPoly::centerVector() const
+Vector2 FloodPoly::centerVector() const
 {
     if ( m_nodes.isEmpty() )
         return Vector2(0, 0);
@@ -136,19 +136,19 @@ Vector2 VectaPoly::centerVector() const
     return acc * (1.0 / (double)items);
 }
 
-VectaPoly::Nodes & VectaPoly::edit()
+FloodPoly::Nodes & FloodPoly::edit()
 {
     return m_nodes;
 }
 
-const VectaPoly::Nodes & VectaPoly::view() const
+const FloodPoly::Nodes & FloodPoly::view() const
 {
     return m_nodes;
 }
 
-static VectaPoly::Node fadedNode( const VectaPoly::Node & a, const VectaPoly::Node & b, double phase )
+static FloodPoly::Node fadedNode( const FloodPoly::Node & a, const FloodPoly::Node & b, double phase )
 {
-    VectaPoly::Node fadedNode;
+    FloodPoly::Node fadedNode;
     fadedNode.point = a.point * (1.0 - phase) + b.point * phase;
     double cRo = a.control.ro() * (1.0 - phase) + b.control.ro() * phase;
     double cTheta = a.control.theta() * (1.0 - phase) + b.control.theta() * phase;
@@ -156,9 +156,9 @@ static VectaPoly::Node fadedNode( const VectaPoly::Node & a, const VectaPoly::No
     return fadedNode;
 }
 
-VectaPoly VectaPoly::fadedTo( const VectaPoly & other, double phase ) const
+FloodPoly FloodPoly::fadedTo( const FloodPoly & other, double phase ) const
 {
-    VectaPoly fadedLine;
+    FloodPoly fadedLine;
     Nodes::const_iterator myIt = m_nodes.begin(), myEnd = m_nodes.end();
     const Nodes & otherNodes = other.view();
     Nodes::const_iterator hisIt = otherNodes.begin(), hisEnd = otherNodes.end();
@@ -170,7 +170,7 @@ VectaPoly VectaPoly::fadedTo( const VectaPoly & other, double phase ) const
     return fadedLine;
 }
 
-QPainterPath VectaPoly::toPainterPath() const
+QPainterPath FloodPoly::toPainterPath() const
 {
     int nodes = m_nodes.size();
     if ( nodes < 2 )
@@ -197,10 +197,10 @@ QPainterPath VectaPoly::toPainterPath() const
     return path;
 }
 
-void VectaPoly::__dump()
+void FloodPoly::__dump()
 {
-    qWarning( "VectaPoly: %d nodes", m_nodes.count() );
-    foreach ( VectaPoly::Node n, m_nodes ) {
+    qWarning( "FloodPoly: %d nodes", m_nodes.count() );
+    foreach ( FloodPoly::Node n, m_nodes ) {
         n.point.dump();
         n.control.dump();
     }

@@ -27,62 +27,15 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef __VectaPoly__
-#define __VectaPoly__
+#ifndef __FloodAnimatorText_h__
+#define __FloodAnimatorText_h__
 
-#include <QtCore/QList>
-#include <QtCore/QString>
-#include <QtGui/QPainterPath>
-#include <QRectF>
-#include "enricomath.h"
+#include "FloodAnimator.h"
 
-// TODO: ADD A NOTION OF LINE-FOLLOWING for Rendering Segments
-
-/// \brief Basic editable path, the atom of this framework
-class VectaPoly {
+class FloodAnimatorText : public FloodAnimator {
     public:
-        VectaPoly();
-
-        // definitions
-        struct Node {
-            Vector2     point;
-            Control2    control;
-        };
-        typedef QList< Node > Nodes;
-
-        // structure manipulations
-        void addNode( const Node & node );
-        void addNode( const Vector2 & point, const Control2 & control );
-        Node takeFirst();
-        Node takeLast();
-        void reset();
-        int nodes() const;
-
-        // aspect manipulation
-        void setPos( double px, double py );
-        void moveBy( double tx, double ty );
-        void scale( const Vector2 & pivot, double xMag, double yMag );
-        QRectF pointsBoundingRect() const;
-        Vector2 centerVector() const;
-
-        // direct point editing
-        Nodes & edit();
-        const Nodes & view() const;
-
-        // other stuff
-        VectaPoly fadedTo( const VectaPoly & other, double phase ) const;
-
-        // generate a QPainterPath from this (temp.. for rendering)
-        QPainterPath toPainterPath() const;
-
-        // debug
-        void __dump();
-
-    private:
-        Nodes m_nodes;
+        FloodAnimatorText();
 };
 
-/// \brief VectaPoly collection
-typedef QList< VectaPoly > VectaPolys;
-
 #endif
+

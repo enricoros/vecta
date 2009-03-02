@@ -27,41 +27,26 @@
  *                                                                         *
  ***************************************************************************/
 
-#include "VecAnimatorTwirl.h"
-#include "enricomath.h"
+#include "FloodAnimatorGravity.h"
 
-VecAnimatorTwirl::VecAnimatorTwirl( double cx, double cy, double rads )
-    : m_center( cx, cy )
-    , m_rads( rads )
+FloodAnimatorGravity::FloodAnimatorGravity( double g )
+    : m_gConst( g )
 {
 }
 
-void VecAnimatorTwirl::step( VectaPoly & VectaPoly )
+void FloodAnimatorGravity::step( int id, FloodPoly & FloodPoly, double dT )
 {
-    QList<VectaPoly::Node> & nodes = VectaPoly.edit();
-    QList<VectaPoly::Node>::iterator it = nodes.begin(), end = nodes.end();
-    for ( ; it != end; ++it ) {
-        Vector2 rad = it->point - m_center;
-        // rotate the rad vector
-        double mod = rad.module();
-        if ( mod > 0.0 ) {
-            Control2 c( mod * 0.999, rad.angle() );
-            double thDiff = m_rads / mod;
-            c.addTheta( thDiff );
-            rad = c.toVector2();
-            it->point = rad + m_center;
-            it->control.addTheta( thDiff );
-        }
-    }
-}
+    if ( !m_states.contains( id ) )
+        m_states[ id ] = QPair< double, double >( 0, m_gConst * (1 + (double)qrand() / RAND_MAX) );
 
-void VecAnimatorTwirl::setPos( double x, double y )
-{
-    m_center = Vector2( x, y );
-}
+    // phy update
+    double acc = m_states[ id ].second;
+    double speed = m_states[ id ].first + acc * dT;
+    m_states[ id ].first = speed;
 
-void VecAnimatorTwirl::setSpeed( double rads )
-{
-    m_rads = rads;
+    QList<FloodPoly::Node> & nodes = FloodPoly.edit();
+    QList<FloodPoly::Node>::iterator it = nodes.begin(), end = nodes.end();
+    for ( ; it != end; ++it )
+        it->point += Vector2( 0, speed * dT );
 }
 

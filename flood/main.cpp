@@ -29,42 +29,42 @@
 
 #include <QApplication>
 #include <QWidget>
-#include "VectaGenerator.h"
-#include "VectaTransition.h"
-#include "VectaWidget.h"
+#include "FloodGenerator.h"
+#include "FloodTransition.h"
+#include "FloodWidget.h"
 
 int main( int argc, char ** args )
 {
     QApplication app( argc, args );
 
-    VectaPolys svgPolys = VectaGenerator::fromSvgPaths( "main-example.svg" );
-    VectaPolys apartPolys = VectaGenerator::spreadPolys( svgPolys, QRect( 0, 0, 640, 480 ) );
-    VectaPolys fallenPolys = VectaGenerator::heavyPolys( svgPolys, 100, 1.0 );
-    VectaPolys s1p = VectaGenerator::starPolys( svgPolys, 0.2 );
-    VectaPolys s2p = VectaGenerator::starPolys( s1p, 1.2 );
-    VectaPolys s3p = VectaGenerator::starPolys( s2p, 1.2 );
-    VectaPolys s4p = VectaGenerator::starPolys( svgPolys, 0.1 );
+    FloodPolys svgPolys = FloodGenerator::fromSvgPaths( "main-example.svg" );
+    FloodPolys apartPolys = FloodGenerator::spreadPolys( svgPolys, QRect( 0, 0, 640, 480 ) );
+    FloodPolys fallenPolys = FloodGenerator::heavyPolys( svgPolys, 100, 1.0 );
+    FloodPolys s1p = FloodGenerator::starPolys( svgPolys, 0.2 );
+    FloodPolys s2p = FloodGenerator::starPolys( s1p, 1.2 );
+    FloodPolys s3p = FloodGenerator::starPolys( s2p, 1.2 );
+    FloodPolys s4p = FloodGenerator::starPolys( svgPolys, 0.1 );
 
-    VectaWidget vecta( 0 );
+    FloodWidget vecta( 0 );
     vecta.resize( 1024, 768 );
     vecta.show();
 
-    VectaTransition * t1 = new VectaTransition( fallenPolys, svgPolys );
-    t1->setTransition( VectaTransition::QuadInOut, true );
+    FloodTransition * t1 = new FloodTransition( fallenPolys, svgPolys );
+    t1->setTransition( FloodTransition::QuadInOut, true );
     t1->setDuration( 2.0 );
 
-    VectaTransition * t2 = new VectaTransition( svgPolys, apartPolys );
-    t2->setTransition( VectaTransition::QuadIn, true );
+    FloodTransition * t2 = new FloodTransition( svgPolys, apartPolys );
+    t2->setTransition( FloodTransition::QuadIn, true );
     t2->setDuration( 2.0 );
 
     vecta.appendTransition( t1 );
     vecta.appendTransition( t2 );
-    vecta.appendTransition( new VectaTransition( apartPolys, svgPolys ) );
-    vecta.appendTransition( new VectaTransition( svgPolys, s1p ) );
-    vecta.appendTransition( new VectaTransition( s1p, s2p ) );
-    vecta.appendTransition( new VectaTransition( s2p, s3p ) );
-    vecta.appendTransition( new VectaTransition( s3p, s4p ) );
-    vecta.appendTransition( new VectaTransition( s4p, svgPolys ) );
+    vecta.appendTransition( new FloodTransition( apartPolys, svgPolys ) );
+    vecta.appendTransition( new FloodTransition( svgPolys, s1p ) );
+    vecta.appendTransition( new FloodTransition( s1p, s2p ) );
+    vecta.appendTransition( new FloodTransition( s2p, s3p ) );
+    vecta.appendTransition( new FloodTransition( s3p, s4p ) );
+    vecta.appendTransition( new FloodTransition( s4p, svgPolys ) );
     vecta.startTransitions();
 
     return app.exec();

@@ -27,16 +27,16 @@
  *                                                                         *
  ***************************************************************************/
 
-#include "VectaWidget.h"
-#include "VecAnimatorTwirl.h"
-#include "VecAnimatorGravity.h"
+#include "FloodWidget.h"
+#include "FloodAnimatorTwirl.h"
+#include "FloodAnimatorGravity.h"
 
 #include <QPainter>
 #include <QTimer>
 #include <QEvent>
 #include <QResizeEvent>
 
-VectaWidget::VectaWidget( QWidget * vampiredWidget )
+FloodWidget::FloodWidget( QWidget * vampiredWidget )
     : QWidget( vampiredWidget )
     , m_vampiredWidget( vampiredWidget )
     , m_wireframe( false )
@@ -51,7 +51,7 @@ VectaWidget::VectaWidget( QWidget * vampiredWidget )
         show();
     }
 
-    // ignore mouse events, only use this widget for 'overlay-VectaWidget'
+    // ignore mouse events, only use this widget for 'overlay-FloodWidget'
     setAttribute( Qt::WA_TransparentForMouseEvents );
 
     // start the refresh timer
@@ -59,27 +59,27 @@ VectaWidget::VectaWidget( QWidget * vampiredWidget )
     connect( m_timer, SIGNAL(timeout()), this, SLOT(slotAnimate()) );
 }
 
-VectaWidget::~VectaWidget()
+FloodWidget::~FloodWidget()
 {
     clear();
 }
 
-void VectaWidget::setPaintingWireframe( bool enabled )
+void FloodWidget::setPaintingWireframe( bool enabled )
 {
     m_wireframe = enabled;
 }
 
-void VectaWidget::setPaintingStyle( PaintingStyle style )
+void FloodWidget::setPaintingStyle( PaintingStyle style )
 {
     m_paintStyle = style;
 }
 
-void VectaWidget::setPaintingColor( const QColor & color )
+void FloodWidget::setPaintingColor( const QColor & color )
 {
     m_color = color;
 }
 
-void VectaWidget::appendTransition( VectaTransition * transition )
+void FloodWidget::appendTransition( FloodTransition * transition )
 {
     // enqueue it
     m_nextTransitions.append( transition );
@@ -90,7 +90,7 @@ void VectaWidget::appendTransition( VectaTransition * transition )
     connect( transition, SIGNAL(ended()), this, SLOT(slotTransitionEnded()) );
 }
 
-void VectaWidget::startTransitions()
+void FloodWidget::startTransitions()
 {
     // select the next transition if we have no current
     if ( !m_currentTransition ) {
@@ -110,7 +110,7 @@ void VectaWidget::startTransitions()
     }
 }
 
-void VectaWidget::clear()
+void FloodWidget::clear()
 {
     // dispose transitions
     delete m_currentTransition;
@@ -123,7 +123,7 @@ void VectaWidget::clear()
     update();
 }
 
-bool VectaWidget::eventFilter( QObject * obj, QEvent * event )
+bool FloodWidget::eventFilter( QObject * obj, QEvent * event )
 {
     // resize to cover the whole vampiredWidget area
     if ( obj == m_vampiredWidget && event->type() == QEvent::Resize ) {
@@ -134,7 +134,7 @@ bool VectaWidget::eventFilter( QObject * obj, QEvent * event )
     return QObject::eventFilter( obj, event );
 }
 
-void VectaWidget::paintEvent( QPaintEvent * /*event*/ )
+void FloodWidget::paintEvent( QPaintEvent * /*event*/ )
 {
     if ( !m_currentTransition )
         return;
@@ -160,8 +160,8 @@ void VectaWidget::paintEvent( QPaintEvent * /*event*/ )
 
     // draw each poly
     int i = 0;
-    const VectaPolys & polys = m_currentTransition->polys();
-    foreach ( const VectaPoly & poly, polys ) {
+    const FloodPolys & polys = m_currentTransition->polys();
+    foreach ( const FloodPoly & poly, polys ) {
 
         // adapt to painting style
         switch ( m_paintStyle ) {
@@ -193,7 +193,7 @@ void VectaWidget::paintEvent( QPaintEvent * /*event*/ )
     }
 }
 
-void VectaWidget::slotAnimate()
+void FloodWidget::slotAnimate()
 {
     if ( !m_currentTransition )
         return;
@@ -207,25 +207,25 @@ void VectaWidget::slotAnimate()
     m_currentTransition->updateAnimation( dT );
 }
 
-void VectaWidget::slotTransitionStarted()
+void FloodWidget::slotTransitionStarted()
 {
     // nothing to do here..
 }
 
-void VectaWidget::slotTransitionUpdated()
+void FloodWidget::slotTransitionUpdated()
 {
     update();
 }
 
-void VectaWidget::slotTransitionEnded()
+void FloodWidget::slotTransitionEnded()
 {
     // find out the Transition
-    VectaTransition * transition = static_cast< VectaTransition * >( sender() );
+    FloodTransition * transition = static_cast< FloodTransition * >( sender() );
     transition->deleteLater();
 
     // sanity check
     if ( transition != m_currentTransition ) {
-        qWarning( "VectaWidget::slotTransitionEnded: some transition ended, but not the current one!" );
+        qWarning( "FloodWidget::slotTransitionEnded: some transition ended, but not the current one!" );
         return;
     }
 

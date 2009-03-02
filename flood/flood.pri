@@ -3,19 +3,19 @@ INCLUDEPATH += $$PWD
 DEPENDPATH += $$PWD
 QT += svg \
     xml
-HEADERS += VecAnimator.h \
-    VecAnimatorAttractor.h \
-    VecAnimatorGravity.h \
-    VecAnimatorText.h \
-    VecAnimatorTwirl.h \
-    VecAnimatorWind.h \
-    VectaGenerator.h \
-    VectaPoly.h \
-    VectaTransition.h \
-    VectaWidget.h
-SOURCES += VecAnimatorTwirl.cpp \
-    VecAnimatorGravity.cpp \
-    VectaGenerator.cpp \
-    VectaPoly.cpp \
-    VectaTransition.cpp \
-    VectaWidget.cpp
+HEADERS += FloodAnimator.h \
+    FloodAnimatorAttractor.h \
+    FloodAnimatorGravity.h \
+    FloodAnimatorText.h \
+    FloodAnimatorTwirl.h \
+    FloodAnimatorWind.h \
+    FloodGenerator.h \
+    FloodPoly.h \
+    FloodTransition.h \
+    FloodWidget.h
+SOURCES += FloodAnimatorTwirl.cpp \
+    FloodAnimatorGravity.cpp \
+    FloodGenerator.cpp \
+    FloodPoly.cpp \
+    FloodTransition.cpp \
+    FloodWidget.cpp

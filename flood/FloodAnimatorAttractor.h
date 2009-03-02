@@ -27,14 +27,18 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef __VecAnimatorWind_h__
-#define __VecAnimatorWind_h__
+#ifndef __FloodAnimatorAttractor_h__
+#define __FloodAnimatorAttractor_h__
 
-#include "VecAnimator.h"
+#include "FloodAnimator.h"
 
-class VecAnimatorWind : public VecAnimator {
+class FloodAnimatorAttractor : public FloodAnimator {
     public:
-        VecAnimatorWind();
+        FloodAnimatorAttractor();
+
+        void addAttractor( qreal x, qreal y, qreal magnitude );
+        void clearAttractors();
+        int attractors() const;
 };
 
 #endif

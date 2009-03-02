@@ -27,21 +27,61 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef __VectaGenerator_h__
-#define __VectaGenerator_h__
+#ifndef __FloodTransition_h__
+#define __FloodTransition_h__
 
-#include "VectaPoly.h"
+#include <QObject>
+#include "FloodPoly.h"
 
-class VectaGenerator {
+class FloodTransition : public QObject {
+    Q_OBJECT
     public:
-        // loaders
-        static VectaPoly fromQPainterPath( const QPainterPath & painterPath );
-        static VectaPolys fromSvgPaths( const QString & fileName, const QString & elementId = QString() );
+        // public types
+        enum TransitionShape { Zero, One, Linear, QuadIn, QuadOut, QuadInOut };
 
-        // generators
-        static VectaPolys starPolys( const VectaPolys & source, double mag = 0.1 );
-        static VectaPolys spreadPolys( const VectaPolys & source, const QRect & outGemetry );
-        static VectaPolys heavyPolys( const VectaPolys & source, double G, double dT );
+        // ctor
+        FloodTransition( const FloodPolys & startConfig, const FloodPolys & endConfig, double duration = 1.0, TransitionShape shape = Linear, bool growing = true );
+        ~FloodTransition();
+
+        // animation setup
+        void setDuration( double duration );
+        void setTransition( TransitionShape shape, bool growing );
+        void setAlphaTransition( TransitionShape shape, bool growing );
+
+        // animation control
+        void startAnimation();
+        void stopAnimation();
+        bool running() const;
+
+        // called by FloodWidget
+        void updateAnimation( double dT );
+        const FloodPolys & polys() const;
+        double alpha() const;
+
+    Q_SIGNALS:
+        void started();
+        void updated();
+        void ended();
+
+    private:
+        void updatePolys( double phase );
+        void updateAlpha( double phase );
+        double factor( double phase, TransitionShape tShape, bool growing );
+
+        // startup config
+        FloodPolys m_startPolys;
+        FloodPolys m_stopPolys;
+        FloodPolys m_currentPolys;
+        double m_duration;
+        TransitionShape m_polyTransition;
+        bool m_polyGrowing;
+        TransitionShape m_alphaTransition;
+        bool m_alphaGrowing;
+
+        // animation stuff
+        bool m_running;
+        double m_time;
+        double m_alpha;
 };
 
 #endif
